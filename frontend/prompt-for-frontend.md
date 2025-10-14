@@ -8,7 +8,7 @@ Crear una **aplicación web moderna y responsiva** para la gestión integral de 
 
 ### 📁 Ubicación del Proyecto
 
-**IMPORTANTE**: El proyecto frontend debe desarrollarse en la carpeta `@fiscalizar-frontend/` como directorio raíz. Esta carpeta debe crearse en el mismo nivel que `fiscalizar-backend/` en la estructura del repositorio.
+**IMPORTANTE**: El proyecto frontend debe desarrollarse en el directorio raíz. 
 
 ### Stack Tecnológico Recomendado
 
@@ -24,7 +24,6 @@ Crear una **aplicación web moderna y responsiva** para la gestión integral de 
 ### Estructura del Proyecto
 
 ```
-@fiscalizar-frontend/
 ├── src/
 │   ├── components/
 │   │   ├── ui/                 # Componentes base reutilizables
@@ -430,13 +429,9 @@ Una aplicación web moderna que permita:
 
 ```bash
 # Navegar al directorio raíz del proyecto
-cd E:\0_mmb\0_repos\fiscalizar.org
+cd E:\0_mmb\0_repos\fiscalizar-frontend
 
-# Crear la carpeta del frontend
-mkdir @fiscalizar-frontend
-cd @fiscalizar-frontend
-
-# Crear proyecto React con Vite
+# Crear proyecto React con Vite en el directorio raíz
 npm create vite@latest . -- --template react-ts
 
 # Instalar dependencias
@@ -456,33 +451,33 @@ npm run dev
 ### 📁 Estructura Final del Repositorio
 
 ```
-fiscalizar.org/
-├── @fiscalizar-frontend/     # Proyecto frontend (NUEVO)
-│   ├── src/
-│   ├── public/
-│   ├── package.json
+fiscalizar-frontend/
+├── src/                      # Código fuente del frontend
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
 │   └── ...
-├── fiscalizar-backend/       # Proyecto backend (EXISTENTE)
-│   ├── src/
-│   ├── prisma/
-│   └── ...
-├── docs/                     # Documentación
-└── ...
+├── public/                   # Assets estáticos
+├── package.json             # Dependencias del proyecto
+├── tailwind.config.js       # Configuración de Tailwind
+├── vite.config.ts          # Configuración de Vite
+├── tsconfig.json           # Configuración de TypeScript
+├── fiscalizar-docs/        # Documentación del proyecto
+└── docs-frontend/          # Documentación específica del frontend
 ```
 
 ## 💡 Próximos Pasos
 
-1. **Crear la carpeta `@fiscalizar-frontend/`** en el directorio raíz del proyecto
-2. **Configurar el proyecto** con las dependencias base
-3. **Implementar el sistema de routing** con React Router
-4. **Crear los componentes UI base** con Tailwind y colores de LLA
-5. **Implementar el estado global** con Zustand
-6. **Conectar con la API** del backend (fiscalizar-backend)
-7. **Desarrollar las páginas principales** una por una
-8. **Implementar la navegación interconectada**
-9. **Optimizar para móviles** y testing
-10. **Agregar visualizaciones** y reportes
-11. **Testing y deployment**
+1. **Configurar el proyecto** con las dependencias base en el directorio raíz
+2. **Implementar el sistema de routing** con React Router
+3. **Crear los componentes UI base** con Tailwind y colores de LLA
+4. **Implementar el estado global** con Zustand
+5. **Conectar con la API** del backend
+6. **Desarrollar las páginas principales** una por una
+7. **Implementar la navegación interconectada**
+8. **Optimizar para móviles** y testing
+9. **Agregar visualizaciones** y reportes
+10. **Testing y deployment**
 
 ---
 
