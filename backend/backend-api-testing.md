@@ -14,6 +14,8 @@ Este documento describe cómo probar el backend API del sistema de fiscalizació
 
 ## 🗳️ Dominio Electoral Modelado
 
+> Para una descripción completa del dominio, roles, herencia de permisos y alcances territoriales, revisar: [Diseño de Dominio y Modelo de Permisos](./dominio-negocio-y-permisos.md)
+
 ### Jerarquía de Entidades:
 ```
 Zonas (nivel más alto)
