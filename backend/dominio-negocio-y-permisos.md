@@ -15,6 +15,32 @@ Relación jerárquica: Zonas → Colegios → Mesas → Fiscales (asignados seg�
 
 ---
 
+### Lugar de votación de Fiscales
+
+En el modelo operativo, los fiscales también deben votar y, por lo general, NO votan en la misma mesa donde fiscalizan.
+
+- Registro de votación:
+  - Para cada fiscal se debe registrar su `colegioDondeVota` y, si se conoce, su `mesaDondeVota`.
+  - Estos datos son independientes de las asignaciones de fiscalización (`mesasAFiscalizar`) y pueden pertenecer a otro colegio/zona.
+
+- Implicancias operativas:
+  - Planificación de traslados y tiempos: el sistema debe permitir visualizar conflictos de horario entre la mesa donde vota y la mesa donde fiscaliza.
+  - Comunicación: avisos previos a fiscales sobre ventanas de tiempo recomendadas para ir a votar y regresar a fiscalizar.
+  - Cobertura: permitir reasignaciones temporales si un fiscal necesita ausentarse para votar.
+
+- Permisos sobre estos datos:
+  - Visualización: ADMIN, COORDINADOR y el propio fiscal; FISCAL_ZONA y FISCAL_GENERAL dentro de su alcance territorial.
+  - Edición:
+    - ADMIN y COORDINADOR: siempre.
+    - FISCAL_ZONA/FISCAL_GENERAL: solo si el fiscal pertenece a su alcance (zona/colegio).
+    - El propio fiscal puede proponer actualización de `colegioDondeVota/mesaDondeVota` (sujeto a revisión si se define moderación).
+
+- Notas de consistencia:
+  - No se exige que `mesaDondeVota` exista en el mismo colegio/zona de fiscalización.
+  - Cuando no se conoce la mesa, se registra únicamente `colegioDondeVota` y se permite completar la mesa más tarde.
+
+---
+
 ## Roles del Sistema y Herencia
 
 El sistema define roles con herencia para simplificar la administración de permisos. La herencia implica que un rol incluye las capacidades de los roles “inferiores”. Adicionalmente, cada rol (salvo ADMIN) opera dentro de un alcance territorial (scope) asignado.
@@ -120,6 +146,35 @@ Se permite adjuntar documentación visual (por ejemplo, **Certificados de Escrut
 - El alcance territorial se deriva de las asignaciones registradas (p. ej., `UserZona`, `UserColegio`, `UserMesa`) y se valida en cada acción sensible.
 - Las acciones organizativas (crear/eliminar zonas y colegios) generalmente son exclusivas de ADMIN/COORDINADOR.
 - Las acciones operativas se apegan estrictamente al alcance: zonas → colegios → mesas.
+
+---
+
+## Canales de Conversación por Zona/Colegio/Mesa
+
+El sistema contempla canales de conversación tipo “foro” asociados a cada entidad territorial para coordinación operativa y trazabilidad.
+
+- **Tipos de canal**:
+  - Canal de **Zona**: discusiones y avisos generales para todos los actores asociados a la zona.
+  - Canal de **Colegio**: coordinación específica entre responsables del colegio y fiscales asignados.
+  - Canal de **Mesa**: comunicación operativa directa (por ejemplo, incidencias, avances, fotos de documentación).
+
+- **Participación y permisos**:
+  - Lectura y escritura para usuarios relacionados con el recurso del canal, respetando alcance territorial:
+    - ADMIN/COORDINADOR: acceso global.
+    - FISCAL_ZONA: canales de sus zonas (y, por extensión, colegios y mesas de dichas zonas).
+    - FISCAL_GENERAL: canales de sus colegios (y mesas dentro de esos colegios).
+    - FISCAL_MESA: solo los canales de sus mesas asignadas.
+  - (Opcional) Roles de moderación por canal para marcar mensajes como importantes, cerrar hilos o fijar posts.
+
+- **Recomendaciones funcionales**:
+  - Estructura de posts con título, contenido, autor, timestamps, adjuntos (imágenes/documentos), etiquetas.
+  - Notificaciones configurables (push/email) por menciones, respuestas o palabras clave.
+  - Buscador por texto, autor, etiqueta y rango temporal.
+  - (Opcional) Estados de hilos: abierto, en seguimiento, resuelto.
+
+- **Privacidad y cumplimiento**:
+  - Respetar el alcance territorial en la visibilidad de hilos y adjuntos.
+  - Registrar auditoría (quién publica, edita o elimina) y conservar histórico según políticas.
 
 ---
 
