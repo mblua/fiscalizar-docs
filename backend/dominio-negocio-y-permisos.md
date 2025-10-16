@@ -103,6 +103,21 @@ Las siguientes reglas describen quién puede realizar cada acción. Siempre se a
 - Crear “Fiscal de Mesa”: ADMIN, COORDINADOR, FISCAL_GENERAL (solo dentro de sus colegios asignados).
 - Lectura/gestión de fiscales: sujeta al alcance territorial y tipo de fiscal.
 
+#### Transiciones de Rol (Promociones)
+
+Reglas de cambio de rol entre tipos de fiscales, respetando alcance territorial:
+
+- **ADMIN**: puede realizar cualquier transformación de rol (sin restricciones de alcance).
+- **COORDINADOR**:
+  - Puede transformar un **Fiscal de Mesa → Fiscal General** (si el fiscal pertenece a su ámbito organizativo).
+  - Puede transformar un **Fiscal General → Fiscal de Zona** (asignando la/s zona/s correspondientes).
+- **FISCAL_ZONA**:
+  - Puede transformar un **Fiscal de Mesa → Fiscal General**, únicamente si el fiscal y la(s) mesa(s)/colegio(s) involucrados pertenecen a sus **zonaIds** asignadas.
+
+Notas:
+- Las transiciones deben actualizar las asignaciones de alcance (p. ej., al promover a **Fiscal General**, asignar `colegioIds`; al promover a **Fiscal de Zona**, asignar `zonaIds`).
+- Se recomienda registrar auditoría (quién realizó el cambio, cuándo y desde qué rol).
+
 ### Mesas
 - Crear mesa: ADMIN, COORDINADOR, FISCAL_GENERAL (solo en sus colegios asignados).
 - Editar/eliminar mesa: ADMIN, COORDINADOR; FISCAL_GENERAL dentro de su alcance (según reglas definidas por la organización).
