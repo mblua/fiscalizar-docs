@@ -2,6 +2,8 @@
 
 Este documento describe cómo funciona la aplicación a nivel de negocio: la jerarquía del dominio electoral, los roles del sistema, la herencia de permisos, el alcance territorial (scope) y las reglas de autorización por tipo de acción, incluyendo la carga de documentación fotográfica asociada a mesas (por ejemplo, Certificados de Escrutinio).
 
+> **⚠️ ESTADO ACTUAL**: Este documento describe el **diseño conceptual** del sistema de permisos y roles. La implementación actual del backend **NO incluye** el sistema de roles, permisos ni alcance territorial descrito aquí. El sistema actual solo implementa autenticación básica por `client_secret` y operaciones CRUD sin restricciones de permisos.
+
 ---
 
 ## Dominio Electoral
@@ -10,8 +12,73 @@ Este documento describe cómo funciona la aplicación a nivel de negocio: la jer
 - **Colegios**: Establecimientos educativos donde se vota, pertenecen a una zona.
 - **Mesas**: Mesas de votación específicas dentro de un colegio.
 - **Fiscales**: Personas con responsabilidades de fiscalización. Se clasifican por tipo de rol operativo.
+- **TiposFiscales**: Categorías de fiscales (Fiscal General, Fiscal de Mesa, Fiscal de Zona).
 
 Relación jerárquica: Zonas → Colegios → Mesas → Fiscales (asignados según funciones y alcance).
+
+### Implementación Actual del Modelo de Datos
+
+El sistema implementa correctamente las siguientes entidades en PostgreSQL:
+
+#### **Zona**
+- `id` (Int, PK) - Identificador único
+- `nombre` (String, único) - Nombre de la zona
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relación: `colegios Colegio[]`
+
+#### **Colegio**
+- `id` (Int, PK) - Identificador único
+- `nombre` (String, único) - Nombre del colegio
+- `direccion` (String, opcional) - Dirección
+- `zonaId` (Int, FK) - Referencia a Zona
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relaciones: `zona Zona?`, `mesas Mesa[]`, `fiscalesQueVotan Fiscal[]`, `fiscalColegios FiscalColegio[]`
+
+#### **TipoFiscal**
+- `id` (Int, PK) - Identificador único
+- `nombre` (String, único) - Nombre del tipo
+- `descripcion` (String, opcional) - Descripción
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relación: `fiscales Fiscal[]`
+
+#### **Fiscal**
+- `id` (Int, PK) - Identificador único
+- `dni` (String, único) - DNI del fiscal
+- `nombre`, `apellido` (String, opcional) - Datos personales
+- `email` (String, opcional) - Email de contacto
+- `celular` (String, opcional) - Teléfono
+- `direccion` (String, opcional) - Dirección
+- `tipoFiscalId` (Int, FK) - Referencia a TipoFiscal
+- `mesaDondeVotaId` (Int, FK) - Mesa donde vota
+- `colegioDondeVotaId` (Int, FK) - Colegio donde vota
+- `disponibilidad` (String, opcional) - Horarios disponibles
+- `notasInternas` (String, opcional) - Notas internas
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relaciones: `tipoFiscal TipoFiscal?`, `colegioDondeVota Colegio?`, `mesasAFiscalizar Mesa[]`, `mesaDondeVota Mesa?`, `fiscalColegios FiscalColegio[]`
+
+#### **Mesa**
+- `id` (Int, PK) - Identificador único
+- `colegioId` (Int, FK) - Referencia a Colegio
+- `numero` (String, único) - Número de mesa
+- `totalVotantesPadron` (Int, opcional) - Total de votantes en el padrón
+- `totalVotos11Hs` (Int, opcional) - Votos a las 11:00
+- `totalVotos15Hs` (Int, opcional) - Votos a las 15:00
+- `totalVotos18Hs` (Int, opcional) - Votos a las 18:00
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relaciones: `colegio Colegio?`, `fiscalesAFiscalizar Fiscal[]`, `fiscalesQueVotan Fiscal[]`
+
+#### **FiscalColegio** (Tabla intermedia N:N)
+- `id` (Int, PK) - Identificador único
+- `fiscalId` (Int, FK) - Referencia a Fiscal
+- `colegioId` (Int, FK) - Referencia a Colegio
+- `createdAt`, `updatedAt` - Timestamps
+- `enabled` (Boolean) - Soft delete
+- Relaciones: `fiscal Fiscal`, `colegio Colegio`
 
 ---
 
@@ -41,9 +108,43 @@ En el modelo operativo, los fiscales también deben votar y, por lo general, NO 
 
 ---
 
-## Roles del Sistema y Herencia
+## Sistema de Autenticación Actual
 
-El sistema define roles con herencia para simplificar la administración de permisos. La herencia implica que un rol incluye las capacidades de los roles “inferiores”. Adicionalmente, cada rol (salvo ADMIN) opera dentro de un alcance territorial (scope) asignado.
+### Implementación Actual
+El sistema actual implementa **solo autenticación básica** mediante `client_secret`:
+
+```typescript
+// src/middleware/auth.ts
+const CLIENT_SECRET = 'TodosLosPerrosVanAlCielo';
+
+export const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
+  const clientSecret = req.headers['client_secret'] as string;
+  
+  if (!clientSecret || clientSecret !== CLIENT_SECRET) {
+    return res.status(401).json({
+      error: 'Unauthorized',
+      message: 'Header client_secret es requerido'
+    });
+  }
+  
+  return next();
+};
+```
+
+### Limitaciones del Sistema Actual
+- ❌ **Sin roles de usuario**: No hay diferenciación entre tipos de usuarios
+- ❌ **Sin permisos**: Todas las operaciones están disponibles para cualquier usuario autenticado
+- ❌ **Sin alcance territorial**: No hay restricciones basadas en zonas, colegios o mesas
+- ❌ **Sin herencia de permisos**: No existe sistema de roles jerárquicos
+- ❌ **Sin validación de autorización**: No se verifica si un usuario puede realizar una acción específica
+
+---
+
+## Diseño Conceptual: Roles del Sistema y Herencia
+
+> **NOTA**: Esta sección describe el **diseño conceptual** que debería implementarse en el futuro. Actualmente NO está implementado.
+
+El sistema debería definir roles con herencia para simplificar la administración de permisos. La herencia implica que un rol incluye las capacidades de los roles "inferiores". Adicionalmente, cada rol (salvo ADMIN) operaría dentro de un alcance territorial (scope) asignado.
 
 - **Administrador (ADMIN)**
   - Acceso total a todo el sistema. Sin restricciones de alcance.
@@ -52,21 +153,21 @@ El sistema define roles con herencia para simplificar la administración de perm
 - **Coordinador (COORDINADOR)**
   - Gestión organizativa: crear/editar/eliminar Zonas y Colegios; administrar vínculos Zona ↔ Colegio.
   - Puede crear y gestionar Fiscales de Zona.
-  - Incluye permisos de “Fiscal de Zona”.
+  - Incluye permisos de "Fiscal de Zona".
   - Alcance: global para organización o restringido según configuración de scopes.
 
 - **Fiscal de Zona (FISCAL_ZONA)**
-  - Incluye permisos de “Fiscal General”.
+  - Incluye permisos de "Fiscal General".
   - Sus permisos aplican solo a sus zona/s asignadas.
 
 - **Fiscal General (FISCAL_GENERAL)**
-  - Incluye permisos de “Fiscal de Mesa”.
+  - Incluye permisos de "Fiscal de Mesa".
   - Sus permisos aplican solo a su/s colegio/s asignado/s.
 
 - **Fiscal de Mesa (FISCAL_MESA)**
   - Sus permisos aplican solo a su/s mesa/s asignada/s.
 
-Herencia formal utilizada por la aplicación:
+Herencia formal que debería utilizarse:
 
 - ADMIN → COORDINADOR → FISCAL_ZONA → FISCAL_GENERAL → FISCAL_MESA
 
@@ -74,19 +175,33 @@ Herencia formal utilizada por la aplicación:
 
 ## Alcance Territorial (Scope)
 
-Para roles no-ADMIN, todas las acciones están sujetas a su alcance territorial:
+> **NOTA**: Esta sección describe el **diseño conceptual** que debería implementarse. Actualmente NO está implementado.
+
+Para roles no-ADMIN, todas las acciones deberían estar sujetas a su alcance territorial:
 
 - **FISCAL_ZONA**: Autorizado únicamente sobre recursos que pertenezcan a sus `zonaIds` asignadas (y, por extensión, a los colegios y mesas de dichas zonas).
 - **FISCAL_GENERAL**: Autorizado únicamente sobre recursos que pertenezcan a sus `colegioIds` asignados (y, por extensión, a las mesas de dichos colegios).
 - **FISCAL_MESA**: Autorizado únicamente sobre sus `mesaIds` asignadas.
 
-La aplicación valida el alcance comparando el recurso objetivo (zona, colegio o mesa) con las listas asignadas al usuario.
+La aplicación debería validar el alcance comparando el recurso objetivo (zona, colegio o mesa) con las listas asignadas al usuario.
+
+### Estado Actual del Alcance Territorial
+- ❌ **No implementado**: No hay validación de alcance territorial
+- ❌ **Sin restricciones**: Cualquier usuario autenticado puede acceder a cualquier recurso
+- ❌ **Sin asignaciones**: No existe sistema de asignación de usuarios a zonas/colegios/mesas
 
 ---
 
 ## Permisos por Tipo de Acción
 
-Las siguientes reglas describen quién puede realizar cada acción. Siempre se aplican en este orden: 1) ADMIN sin restricciones; 2) verificación de rol (con herencia); 3) verificación de alcance territorial.
+> **NOTA**: Esta sección describe el **diseño conceptual** que debería implementarse. Actualmente NO está implementado.
+
+Las siguientes reglas describen quién debería poder realizar cada acción. Siempre se aplicarían en este orden: 1) ADMIN sin restricciones; 2) verificación de rol (con herencia); 3) verificación de alcance territorial.
+
+### Estado Actual de los Permisos
+- ❌ **Sin restricciones**: Todas las operaciones CRUD están disponibles para cualquier usuario autenticado
+- ❌ **Sin validación de roles**: No se verifica el tipo de usuario antes de permitir operaciones
+- ❌ **Sin validación de alcance**: No se verifica si el usuario tiene permisos sobre el recurso específico
 
 ### Zonas
 - Crear/editar/eliminar zona: ADMIN, COORDINADOR.
@@ -203,6 +318,37 @@ El sistema contempla canales de conversación tipo “foro” asociados a cada e
 
 ## Resumen Ejecutivo
 
-La aplicación implementa una jerarquía territorial Zonas → Colegios → Mesas, con un modelo de roles con herencia (ADMIN, COORDINADOR, FISCAL_ZONA, FISCAL_GENERAL, FISCAL_MESA). Las operaciones organizativas recaen en ADMIN/COORDINADOR, mientras que las operativas dependen del alcance asignado a cada usuario. La carga y gestión de documentación fotográfica asociada a mesas está habilitada para quienes tengan competencia sobre dichas mesas, con controles de tipo, tamaño, metadatos y auditoría.
+### Estado Actual de la Implementación
+
+**✅ Implementado:**
+- Jerarquía territorial Zonas → Colegios → Mesas correctamente modelada en PostgreSQL
+- Relaciones entre entidades bien definidas y funcionales
+- Operaciones CRUD completas para todas las entidades
+- Autenticación básica por `client_secret`
+- Sistema de soft delete (`enabled` field)
+- Paginación y filtros en endpoints
+- Logging estructurado
+- Validaciones de datos básicas
+
+**❌ No Implementado:**
+- Sistema de roles y permisos
+- Alcance territorial (scope)
+- Herencia de permisos
+- Validación de autorización por operación
+- Sistema de usuarios con roles
+- Carga de documentación fotográfica
+- Canales de conversación
+- Transiciones de rol (promociones)
+
+### Diseño Conceptual vs Implementación
+
+Este documento describe el **diseño conceptual** del sistema de permisos y roles que debería implementarse en el futuro. La implementación actual del backend **NO incluye** el sistema de roles, permisos ni alcance territorial descrito aquí.
+
+**Próximos Pasos Recomendados:**
+1. Implementar sistema de usuarios con roles
+2. Agregar validación de permisos en middleware
+3. Implementar alcance territorial
+4. Agregar sistema de carga de documentación
+5. Implementar canales de conversación
 
 
