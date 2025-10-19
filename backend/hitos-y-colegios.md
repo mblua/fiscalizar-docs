@@ -11,12 +11,23 @@ El sistema de hitos y colegios permite gestionar la relación entre hitos electo
 ```sql
 CREATE TABLE "Hitos" (
   id          SERIAL PRIMARY KEY,
-  nombre      VARCHAR NOT NULL,
+  nombre      VARCHAR NOT NULL UNIQUE,
   descripcion TEXT NOT NULL,
   fecha       TIMESTAMP DEFAULT NOW(),
   createdAt   TIMESTAMP DEFAULT NOW(),
   updatedAt   TIMESTAMP DEFAULT NOW(),
-  enabled     BOOLEAN DEFAULT TRUE
+  enabled     BOOLEAN DEFAULT TRUE,
+  
+  -- Campos de estados personalizados
+  estadoDefault        VARCHAR,  -- Estado por defecto para nuevas relaciones
+  estado1Reconocimiento VARCHAR, -- Reconocimiento del estado 1
+  estado1Color         VARCHAR,  -- Color del estado 1
+  estado2Reconocimiento VARCHAR, -- Reconocimiento del estado 2
+  estado2Color         VARCHAR,  -- Color del estado 2
+  estado3Reconocimiento VARCHAR, -- Reconocimiento del estado 3
+  estado3Color         VARCHAR,  -- Color del estado 3
+  estado4Reconocimiento VARCHAR, -- Reconocimiento del estado 4
+  estado4Color         VARCHAR   -- Color del estado 4
 );
 ```
 
@@ -28,6 +39,17 @@ CREATE TABLE "Hitos" (
 - **`createdAt`**: Fecha de creación del registro
 - **`updatedAt`**: Fecha de última actualización
 - **`enabled`**: Estado del hito (true/false)
+
+#### **Campos de Estados Personalizados:**
+- **`estadoDefault`**: Estado por defecto para nuevas relaciones
+- **`estado1Reconocimiento`**: Reconocimiento del estado 1
+- **`estado1Color`**: Color del estado 1
+- **`estado2Reconocimiento`**: Reconocimiento del estado 2
+- **`estado2Color`**: Color del estado 2
+- **`estado3Reconocimiento`**: Reconocimiento del estado 3
+- **`estado3Color`**: Color del estado 3
+- **`estado4Reconocimiento`**: Reconocimiento del estado 4
+- **`estado4Color`**: Color del estado 4
 
 ### **Tabla `HitoColegios`** (Renombrada de EventoColegios)
 
@@ -76,6 +98,7 @@ Hitos (1) ←→ (N) HitoColegios (N) ←→ (1) Colegios
 
 ## 📊 **Estados Disponibles**
 
+### **Estados Estándar:**
 | Estado | Descripción | Uso Típico |
 |--------|-------------|------------|
 | `pendiente` | Estado inicial por defecto | Colegio invitado pero sin respuesta |
@@ -83,6 +106,29 @@ Hitos (1) ←→ (N) HitoColegios (N) ←→ (1) Colegios
 | `activo` | Colegio está activo en el hito | Colegio participando activamente |
 | `inactivo` | Colegio no está participando | Colegio no participa en el hito |
 | `cancelado` | Hito cancelado para este colegio | Hito cancelado o colegio excluido |
+
+### **Estados Personalizados por Hito:**
+Cada hito puede definir hasta 4 estados personalizados con sus respectivos colores:
+
+- **Estado 1**: `estado1Reconocimiento` + `estado1Color`
+- **Estado 2**: `estado2Reconocimiento` + `estado2Color`
+- **Estado 3**: `estado3Reconocimiento` + `estado3Color`
+- **Estado 4**: `estado4Reconocimiento` + `estado4Color`
+
+#### **Ejemplo de Configuración:**
+```json
+{
+  "estadoDefault": "pendiente",
+  "estado1Reconocimiento": "Confirmado",
+  "estado1Color": "#28a745",
+  "estado2Reconocimiento": "En Progreso",
+  "estado2Color": "#ffc107",
+  "estado3Reconocimiento": "Completado",
+  "estado3Color": "#17a2b8",
+  "estado4Reconocimiento": "Cancelado",
+  "estado4Color": "#dc3545"
+}
+```
 
 ## 🚀 **Endpoints de la API**
 
@@ -141,7 +187,16 @@ Content-Type: application/json
 
 {
   "nombre": "Nuevo Hito",
-  "descripcion": "Descripción del hito"
+  "descripcion": "Descripción del hito",
+  "estadoDefault": "pendiente",
+  "estado1Reconocimiento": "Confirmado",
+  "estado1Color": "#28a745",
+  "estado2Reconocimiento": "En Progreso",
+  "estado2Color": "#ffc107",
+  "estado3Reconocimiento": "Completado",
+  "estado3Color": "#17a2b8",
+  "estado4Reconocimiento": "Cancelado",
+  "estado4Color": "#dc3545"
 }
 ```
 
