@@ -2,7 +2,7 @@
 
 ## 🎯 Objetivo
 
-Crear una **aplicación de gestión de asignaciones de personas a escuelas** para un operativo electoral, usando **TypeScript + Prisma + SQLite**. La app debe permitir cargar personas, asignarlas a escuelas, registrar capacitación, horarios, y generar reportes.
+Crear una **aplicación de gestión de asignaciones de personas a escuelas** para un operativo electoral, usando **TypeScript + Prisma + PostgreSQL**. La app debe permitir cargar personas, asignarlas a escuelas, registrar capacitación, horarios, y generar reportes.
 
 ---
 
@@ -10,7 +10,7 @@ Crear una **aplicación de gestión de asignaciones de personas a escuelas** par
 
 * Lenguaje: **TypeScript**
 * ORM: **Prisma**
-* Base de datos: **SQLite** (`app.db`)
+* Base de datos: **PostgreSQL**
 * Librerías adicionales: `csv-parse`, `fs`, `@prisma/client`
 
 ---

@@ -424,37 +424,7 @@ datasource db {
 // ... resto del schema
 ```
 
-### 2. Migración desde SQLite
-```powershell
-# Generar migración inicial
-npx prisma migrate dev --name init
-
-# Aplicar migración
-npx prisma db push
-
-# Generar cliente
-npx prisma generate
-```
-
-### 3. Scripts de Desarrollo
-```powershell
-# Script para desarrollo (dev-postgres.ps1)
-Write-Host "Iniciando PostgreSQL para desarrollo..."
-
-# Iniciar PostgreSQL
-docker-compose up -d postgres
-
-# Esperar a que esté listo
-Start-Sleep -Seconds 10
-
-# Verificar conexión
-docker exec postgres-fiscalizar pg_isready -U fiscalizar_user -d fiscalizar
-
-Write-Host "PostgreSQL listo para desarrollo!"
-```
-
----
-
+  
 ## 📚 Recursos Adicionales
 
 ### Documentación Oficial

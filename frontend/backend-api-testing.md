@@ -2,13 +2,13 @@
 
 ## 📋 Información General
 
-Este documento describe cómo probar el backend API del sistema de fiscalización electoral. El backend está implementado con Node.js, TypeScript, Prisma y SQLite.
+Este documento describe cómo probar el backend API del sistema de fiscalización electoral. El backend está implementado con Node.js, TypeScript, Prisma y PostgreSQL.
 
 ### 🏗️ Arquitectura Implementada
 - **Runtime**: Node.js 18+
 - **Lenguaje**: TypeScript estricto
 - **ORM**: Prisma
-- **Base de datos**: SQLite (`app.db`)
+- **Base de datos**: PostgreSQL
 - **Framework**: Express.js
 - **Puerto**: 3000
 

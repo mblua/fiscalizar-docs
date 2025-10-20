@@ -19,7 +19,7 @@ La organización de fiscales electorales presenta múltiples desafíos:
 ### Backend (API REST)
 - **Tecnología**: Node.js 18+ con TypeScript
 - **Framework**: Express.js
-- **Base de datos**: PostgreSQL (desarrollo: SQLite)
+- **Base de datos**: PostgreSQL
 - **ORM**: Prisma
 - **Seguridad**: Helmet, CORS configurado
 - **Logging**: Sistema estructurado con niveles
