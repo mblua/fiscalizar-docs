@@ -3,7 +3,7 @@
     "data": {
         "metadata": {
             "version": "1.0",
-            "timestamp": "2025-10-18T17:15:56.435Z",
+            "timestamp": "2025-10-21T03:28:19.889Z",
             "totalRecords": {
                 "tiposFiscales": 3,
                 "zonas": 1,
@@ -11,6 +11,11 @@
                 "fiscales": 46,
                 "mesas": 33,
                 "fiscalColegios": 46,
+                "hitos": 1,
+                "hitoFiscales": 46,
+                "hitoMesas": 0,
+                "hitoColegios": 0,
+                "hitoZonas": 0,
                 "csvImports": 0
             }
         },
@@ -99,11 +104,11 @@
             ],
             "fiscales": [
                 {
-                    "id": 47,
+                    "id": 1,
                     "dni": "24276971",
                     "nombre": "Villalba Jorge Antonio",
                     "apellido": null,
-                    "email": "villalba.jorge@email.com",
+                    "email": null,
                     "celular": "1132414299",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -116,11 +121,11 @@
                     "updatedAt": "2025-10-18T05:54:26.121Z"
                 },
                 {
-                    "id": 48,
+                    "id": 2,
                     "dni": "17572900",
                     "nombre": "Alejandro Jose Sueldo",
                     "apellido": null,
-                    "email": "alejandro.sueldo@email.com",
+                    "email": null,
                     "celular": "1136375290",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -130,14 +135,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.147Z",
-                    "updatedAt": "2025-10-18T05:54:26.147Z"
+                    "updatedAt": "2025-10-21T03:21:37.402Z"
                 },
                 {
-                    "id": 49,
+                    "id": 3,
                     "dni": "26604543",
                     "nombre": "Paola Carolina Borges",
                     "apellido": null,
-                    "email": "paola.borges@email.com",
+                    "email": null,
                     "celular": "1138716735",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -147,14 +152,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.172Z",
-                    "updatedAt": "2025-10-18T05:54:26.172Z"
+                    "updatedAt": "2025-10-21T03:21:37.402Z"
                 },
                 {
-                    "id": 50,
+                    "id": 4,
                     "dni": "47434208",
                     "nombre": "Lautaro Yukelson",
                     "apellido": null,
-                    "email": "lautaro.yukelson@email.com",
+                    "email": null,
                     "celular": "1163369900",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -164,14 +169,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.195Z",
-                    "updatedAt": "2025-10-18T05:54:26.195Z"
+                    "updatedAt": "2025-10-21T03:21:37.402Z"
                 },
                 {
-                    "id": 51,
+                    "id": 5,
                     "dni": "10691069",
                     "nombre": "Daniel Zuker",
                     "apellido": null,
-                    "email": "daniel.zuker@email.com",
+                    "email": null,
                     "celular": "1160024300",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -181,14 +186,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.216Z",
-                    "updatedAt": "2025-10-18T05:54:26.216Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 52,
+                    "id": 6,
                     "dni": "24115422",
                     "nombre": "Fabiana Villa",
                     "apellido": null,
-                    "email": "fabiana.villa@email.com",
+                    "email": null,
                     "celular": "1144129766",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -198,14 +203,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.238Z",
-                    "updatedAt": "2025-10-18T05:54:26.238Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 53,
+                    "id": 7,
                     "dni": "4477170",
                     "nombre": "Maria Rosa Capria",
                     "apellido": null,
-                    "email": "maria.capria@email.com",
+                    "email": null,
                     "celular": "1126006680",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -215,14 +220,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.257Z",
-                    "updatedAt": "2025-10-18T05:54:26.257Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 54,
+                    "id": 8,
                     "dni": "92805229",
                     "nombre": "Humberto Javier Ortiz Cantero",
                     "apellido": null,
-                    "email": "humberto.ortiz@email.com",
+                    "email": null,
                     "celular": "1126583191",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -232,14 +237,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.275Z",
-                    "updatedAt": "2025-10-18T05:54:26.275Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 55,
+                    "id": 9,
                     "dni": "40841890",
                     "nombre": "Karen Georgina Velazquez",
                     "apellido": null,
-                    "email": "karen.velazquez@email.com",
+                    "email": null,
                     "celular": "1134921118",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -249,14 +254,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.294Z",
-                    "updatedAt": "2025-10-18T05:54:26.294Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 56,
+                    "id": 10,
                     "dni": "28801782",
                     "nombre": "Tamara Ferrari V C Gringa",
                     "apellido": null,
-                    "email": "tamara.ferrari@email.com",
+                    "email": null,
                     "celular": "1150210415",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -266,14 +271,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.312Z",
-                    "updatedAt": "2025-10-18T05:54:26.312Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 57,
+                    "id": 11,
                     "dni": "96085279",
                     "nombre": "Marina Mendez",
                     "apellido": null,
-                    "email": "marina.mendez@email.com",
+                    "email": null,
                     "celular": "1157324121",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -283,14 +288,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.331Z",
-                    "updatedAt": "2025-10-18T05:54:26.331Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 58,
+                    "id": 12,
                     "dni": "95529631",
                     "nombre": "John Piñango",
                     "apellido": null,
-                    "email": "john.pinango@email.com",
+                    "email": null,
                     "celular": "1128469725",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -300,14 +305,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.348Z",
-                    "updatedAt": "2025-10-18T05:54:26.348Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 59,
+                    "id": 13,
                     "dni": "18154537",
                     "nombre": "Luis Mario Montenegro Palma",
                     "apellido": null,
-                    "email": "luis.montenegro@email.com",
+                    "email": null,
                     "celular": "1124844688",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -317,14 +322,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.366Z",
-                    "updatedAt": "2025-10-18T05:54:26.366Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 60,
+                    "id": 14,
                     "dni": "21369920",
                     "nombre": "Sebastian Patricio Marquez",
                     "apellido": null,
-                    "email": "sebastian.marquez@email.com",
+                    "email": null,
                     "celular": "1133981249",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -334,14 +339,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.384Z",
-                    "updatedAt": "2025-10-18T05:54:26.384Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 61,
+                    "id": 15,
                     "dni": "27050909",
                     "nombre": "Monica Rojas",
                     "apellido": null,
-                    "email": "monica.rojas@email.com",
+                    "email": null,
                     "celular": "1154912950",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -351,14 +356,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.401Z",
-                    "updatedAt": "2025-10-18T05:54:26.401Z"
+                    "updatedAt": "2025-10-21T03:23:00.841Z"
                 },
                 {
-                    "id": 62,
+                    "id": 16,
                     "dni": "95384491",
                     "nombre": "Luis Mario Rojas Ramirez",
                     "apellido": null,
-                    "email": "luis.rojas@email.com",
+                    "email": null,
                     "celular": "1157200568",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -368,14 +373,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.419Z",
-                    "updatedAt": "2025-10-18T05:54:26.419Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 63,
+                    "id": 17,
                     "dni": "95908014",
                     "nombre": "Keilys Nazaret Guerra Marin",
                     "apellido": null,
-                    "email": "keilys.guerra@email.com",
+                    "email": null,
                     "celular": "1166670068",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -385,14 +390,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.438Z",
-                    "updatedAt": "2025-10-18T05:54:26.438Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 64,
+                    "id": 18,
                     "dni": "45615174",
                     "nombre": "Jesús Elías Centurión",
                     "apellido": null,
-                    "email": "jesus.centurion@email.com",
+                    "email": null,
                     "celular": "1151195246",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -402,14 +407,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.456Z",
-                    "updatedAt": "2025-10-18T05:54:26.456Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 65,
+                    "id": 19,
                     "dni": "41668987",
                     "nombre": "Nahuel Nicolas Bien",
                     "apellido": null,
-                    "email": "nahuel.bien@email.com",
+                    "email": null,
                     "celular": "1139187807",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -419,14 +424,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.474Z",
-                    "updatedAt": "2025-10-18T05:54:26.474Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 66,
+                    "id": 20,
                     "dni": "23926426",
                     "nombre": "Jose Roldan",
                     "apellido": null,
-                    "email": "jose.roldan@email.com",
+                    "email": null,
                     "celular": "1168838136",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -436,14 +441,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.493Z",
-                    "updatedAt": "2025-10-18T05:54:26.493Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 67,
+                    "id": 21,
                     "dni": "33310757",
                     "nombre": "Maria B Robotti Y Fernandez",
                     "apellido": null,
-                    "email": "maria.robotti@email.com",
+                    "email": null,
                     "celular": "1153326608",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -453,14 +458,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.511Z",
-                    "updatedAt": "2025-10-18T05:54:26.511Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 68,
+                    "id": 22,
                     "dni": "94699245",
                     "nombre": "René Echevarría",
                     "apellido": null,
-                    "email": "rene.echevarria@email.com",
+                    "email": null,
                     "celular": "1166884178",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -470,14 +475,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.529Z",
-                    "updatedAt": "2025-10-18T05:54:26.529Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 69,
+                    "id": 23,
                     "dni": "95320323",
                     "nombre": "Alon Kanter",
                     "apellido": null,
-                    "email": "alon.kanter@email.com",
+                    "email": null,
                     "celular": "1127156993",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -487,14 +492,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.549Z",
-                    "updatedAt": "2025-10-18T05:54:26.549Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 70,
+                    "id": 24,
                     "dni": "47347915",
                     "nombre": "Franco YU",
                     "apellido": null,
-                    "email": "franco.yu@email.com",
+                    "email": null,
                     "celular": "1164357777",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -504,14 +509,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.568Z",
-                    "updatedAt": "2025-10-18T05:54:26.568Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 71,
+                    "id": 25,
                     "dni": "13655902",
                     "nombre": "Manuel Oscar Goncalves",
                     "apellido": null,
-                    "email": "manuel.goncalves@email.com",
+                    "email": null,
                     "celular": "1169081184",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -521,14 +526,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.592Z",
-                    "updatedAt": "2025-10-18T05:54:26.592Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 72,
+                    "id": 26,
                     "dni": "23433051",
                     "nombre": "Hernan Abel Rivaroli V C",
                     "apellido": null,
-                    "email": "hernan.rivaroli@email.com",
+                    "email": null,
                     "celular": "1130603658",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -538,14 +543,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.617Z",
-                    "updatedAt": "2025-10-18T05:54:26.617Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 73,
+                    "id": 27,
                     "dni": "30892919",
                     "nombre": "Alejandro Fusco",
                     "apellido": null,
-                    "email": "alejandro.fusco@email.com",
+                    "email": null,
                     "celular": "1140952636",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -555,14 +560,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.639Z",
-                    "updatedAt": "2025-10-18T05:54:26.639Z"
+                    "updatedAt": "2025-10-21T03:25:02.038Z"
                 },
                 {
-                    "id": 74,
+                    "id": 28,
                     "dni": "41317946",
                     "nombre": "Gonzalo Giardino",
                     "apellido": null,
-                    "email": "gonzalo.giardino@email.com",
+                    "email": null,
                     "celular": "1124672777",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -572,14 +577,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.660Z",
-                    "updatedAt": "2025-10-18T05:54:26.660Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 75,
+                    "id": 29,
                     "dni": "20061278",
                     "nombre": "Silvina Bravo",
                     "apellido": null,
-                    "email": "silvina.bravo@email.com",
+                    "email": null,
                     "celular": "1136250026",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -589,14 +594,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.680Z",
-                    "updatedAt": "2025-10-18T05:54:26.680Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 76,
+                    "id": 30,
                     "dni": "34145823",
                     "nombre": "Kevin Kesselman",
                     "apellido": null,
-                    "email": "kevin.kesselman@email.com",
+                    "email": null,
                     "celular": "1130588656",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -606,14 +611,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.701Z",
-                    "updatedAt": "2025-10-18T05:54:26.701Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 77,
+                    "id": 31,
                     "dni": "10142027",
                     "nombre": "Gonzalez Podesta Maria Ines",
                     "apellido": null,
-                    "email": "maria.podesta@email.com",
+                    "email": null,
                     "celular": "1136114996",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -623,14 +628,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.719Z",
-                    "updatedAt": "2025-10-18T05:54:26.719Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 78,
+                    "id": 32,
                     "dni": "94036846",
                     "nombre": "Giovanna Villegas",
                     "apellido": null,
-                    "email": "giovanna.villegas@email.com",
+                    "email": null,
                     "celular": "1153313793",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -640,14 +645,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.738Z",
-                    "updatedAt": "2025-10-18T05:54:26.738Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 79,
+                    "id": 33,
                     "dni": "31533958",
                     "nombre": "Alan Hornes",
                     "apellido": null,
-                    "email": "alan.hornes@email.com",
+                    "email": null,
                     "celular": "1155292992",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -657,14 +662,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.757Z",
-                    "updatedAt": "2025-10-18T05:54:26.757Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 80,
+                    "id": 34,
                     "dni": "11837621",
                     "nombre": "Carlos Leonhardt",
                     "apellido": null,
-                    "email": "carlos.leonhardt@email.com",
+                    "email": null,
                     "celular": "1164929832",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -674,14 +679,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.776Z",
-                    "updatedAt": "2025-10-18T05:54:26.776Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 81,
+                    "id": 35,
                     "dni": "95925633",
                     "nombre": "Manuel Alejandro Sumoza F G",
                     "apellido": null,
-                    "email": "manuel.sumoza@email.com",
+                    "email": null,
                     "celular": "1133172841",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -691,14 +696,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.797Z",
-                    "updatedAt": "2025-10-18T05:54:26.797Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 82,
+                    "id": 36,
                     "dni": "37926008",
                     "nombre": "Araceli Marlen Acosta",
                     "apellido": null,
-                    "email": "araceli.acosta@email.com",
+                    "email": null,
                     "celular": "1167374335",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -708,14 +713,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.815Z",
-                    "updatedAt": "2025-10-18T05:54:26.815Z"
+                    "updatedAt": "2025-10-21T03:23:48.579Z"
                 },
                 {
-                    "id": 83,
+                    "id": 37,
                     "dni": "16970176",
                     "nombre": "Marta Susana Barraza",
                     "apellido": null,
-                    "email": "marta.barraza@email.com",
+                    "email": null,
                     "celular": "1165113716",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -725,14 +730,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.833Z",
-                    "updatedAt": "2025-10-18T05:54:26.833Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 84,
+                    "id": 38,
                     "dni": "17499853",
                     "nombre": "Viviana Rotbaum",
                     "apellido": null,
-                    "email": "viviana.rotbaum@email.com",
+                    "email": null,
                     "celular": "1149365927",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -742,14 +747,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.852Z",
-                    "updatedAt": "2025-10-18T05:54:26.852Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 85,
+                    "id": 39,
                     "dni": "28461901",
                     "nombre": "Maria Gabriela Lopez",
                     "apellido": null,
-                    "email": "maria.lopez@email.com",
+                    "email": null,
                     "celular": "1157645276",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -759,14 +764,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.871Z",
-                    "updatedAt": "2025-10-18T05:54:26.871Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 86,
+                    "id": 40,
                     "dni": "19124487",
                     "nombre": "Elizabeth Garcia Flores",
                     "apellido": null,
-                    "email": "elizabeth.garcia@email.com",
+                    "email": null,
                     "celular": "1167420946",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -776,14 +781,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.890Z",
-                    "updatedAt": "2025-10-18T05:54:26.890Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 87,
+                    "id": 41,
                     "dni": "94062387",
                     "nombre": "Carina Garcia",
                     "apellido": null,
-                    "email": "carina.garcia@email.com",
+                    "email": null,
                     "celular": "1169196254",
                     "direccion": null,
                     "tipoFiscalId": 2,
@@ -793,14 +798,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.908Z",
-                    "updatedAt": "2025-10-18T05:54:26.908Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 88,
+                    "id": 42,
                     "dni": "12022542",
                     "nombre": "Pablo Pedro Bernardou",
                     "apellido": null,
-                    "email": "pablo.bernardou@email.com",
+                    "email": null,
                     "celular": "1157340990",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -810,14 +815,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.928Z",
-                    "updatedAt": "2025-10-18T05:54:26.928Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 89,
+                    "id": 43,
                     "dni": "48591327",
                     "nombre": "Juan Ignacio Shirao",
                     "apellido": null,
-                    "email": "juan.shirao@email.com",
+                    "email": null,
                     "celular": "1161129444",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -827,14 +832,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.946Z",
-                    "updatedAt": "2025-10-18T05:54:26.946Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 90,
+                    "id": 44,
                     "dni": "37755476",
                     "nombre": "Christian Maximiliano Ojeda",
                     "apellido": null,
-                    "email": "christian.ojeda@email.com",
+                    "email": null,
                     "celular": "1165155137",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -844,14 +849,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.966Z",
-                    "updatedAt": "2025-10-18T05:54:26.966Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 91,
+                    "id": 45,
                     "dni": "25079388",
                     "nombre": "Javier Broschini",
                     "apellido": null,
-                    "email": "javier.broschini@email.com",
+                    "email": null,
                     "celular": "1151213996",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -861,14 +866,14 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:26.986Z",
-                    "updatedAt": "2025-10-18T05:54:26.986Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 },
                 {
-                    "id": 92,
+                    "id": 46,
                     "dni": "33897577",
                     "nombre": "Damian Herrera",
                     "apellido": null,
-                    "email": "damian.herrera@email.com",
+                    "email": null,
                     "celular": "1132751865",
                     "direccion": null,
                     "tipoFiscalId": 3,
@@ -878,7 +883,7 @@
                     "notasInternas": null,
                     "enabled": true,
                     "createdAt": "2025-10-18T05:54:27.005Z",
-                    "updatedAt": "2025-10-18T05:54:27.005Z"
+                    "updatedAt": "2025-10-21T03:24:23.986Z"
                 }
             ],
             "mesas": [
@@ -1281,8 +1286,16 @@
             ],
             "fiscalColegios": [
                 {
+                    "id": 1,
+                    "fiscalId": 40,
+                    "colegioId": 5,
+                    "enabled": true,
+                    "createdAt": "2025-10-18T06:23:30.821Z",
+                    "updatedAt": "2025-10-18T06:23:30.821Z"
+                },
+                {
                     "id": 6,
-                    "fiscalId": 48,
+                    "fiscalId": 2,
                     "colegioId": 1,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:17:33.944Z",
@@ -1290,7 +1303,7 @@
                 },
                 {
                     "id": 7,
-                    "fiscalId": 47,
+                    "fiscalId": 1,
                     "colegioId": 1,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:17:40.210Z",
@@ -1298,7 +1311,7 @@
                 },
                 {
                     "id": 8,
-                    "fiscalId": 49,
+                    "fiscalId": 3,
                     "colegioId": 1,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:17:45.735Z",
@@ -1306,7 +1319,7 @@
                 },
                 {
                     "id": 9,
-                    "fiscalId": 50,
+                    "fiscalId": 4,
                     "colegioId": 1,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:17:51.856Z",
@@ -1314,7 +1327,7 @@
                 },
                 {
                     "id": 10,
-                    "fiscalId": 51,
+                    "fiscalId": 5,
                     "colegioId": 1,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:17:58.736Z",
@@ -1322,7 +1335,7 @@
                 },
                 {
                     "id": 11,
-                    "fiscalId": 69,
+                    "fiscalId": 23,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:18:51.714Z",
@@ -1330,7 +1343,7 @@
                 },
                 {
                     "id": 12,
-                    "fiscalId": 70,
+                    "fiscalId": 24,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:18:57.697Z",
@@ -1338,7 +1351,7 @@
                 },
                 {
                     "id": 13,
-                    "fiscalId": 71,
+                    "fiscalId": 25,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:19:02.078Z",
@@ -1346,7 +1359,7 @@
                 },
                 {
                     "id": 14,
-                    "fiscalId": 72,
+                    "fiscalId": 26,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:19:06.302Z",
@@ -1354,7 +1367,7 @@
                 },
                 {
                     "id": 15,
-                    "fiscalId": 73,
+                    "fiscalId": 27,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:19:11.517Z",
@@ -1362,7 +1375,7 @@
                 },
                 {
                     "id": 16,
-                    "fiscalId": 74,
+                    "fiscalId": 28,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:19:17.115Z",
@@ -1370,7 +1383,7 @@
                 },
                 {
                     "id": 17,
-                    "fiscalId": 75,
+                    "fiscalId": 29,
                     "colegioId": 4,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:19:21.826Z",
@@ -1378,7 +1391,7 @@
                 },
                 {
                     "id": 18,
-                    "fiscalId": 52,
+                    "fiscalId": 6,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:02.422Z",
@@ -1386,7 +1399,7 @@
                 },
                 {
                     "id": 19,
-                    "fiscalId": 53,
+                    "fiscalId": 7,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:07.689Z",
@@ -1394,7 +1407,7 @@
                 },
                 {
                     "id": 20,
-                    "fiscalId": 54,
+                    "fiscalId": 8,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:12.092Z",
@@ -1402,7 +1415,7 @@
                 },
                 {
                     "id": 21,
-                    "fiscalId": 55,
+                    "fiscalId": 9,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:16.835Z",
@@ -1410,7 +1423,7 @@
                 },
                 {
                     "id": 22,
-                    "fiscalId": 56,
+                    "fiscalId": 10,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:21.390Z",
@@ -1418,7 +1431,7 @@
                 },
                 {
                     "id": 23,
-                    "fiscalId": 57,
+                    "fiscalId": 11,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:25.584Z",
@@ -1426,7 +1439,7 @@
                 },
                 {
                     "id": 24,
-                    "fiscalId": 58,
+                    "fiscalId": 12,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:37.950Z",
@@ -1434,7 +1447,7 @@
                 },
                 {
                     "id": 25,
-                    "fiscalId": 59,
+                    "fiscalId": 13,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:41.687Z",
@@ -1442,7 +1455,7 @@
                 },
                 {
                     "id": 26,
-                    "fiscalId": 60,
+                    "fiscalId": 14,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:45.895Z",
@@ -1450,7 +1463,7 @@
                 },
                 {
                     "id": 27,
-                    "fiscalId": 61,
+                    "fiscalId": 15,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:51.068Z",
@@ -1458,7 +1471,7 @@
                 },
                 {
                     "id": 28,
-                    "fiscalId": 62,
+                    "fiscalId": 16,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:20:58.272Z",
@@ -1466,7 +1479,7 @@
                 },
                 {
                     "id": 29,
-                    "fiscalId": 63,
+                    "fiscalId": 17,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:02.415Z",
@@ -1474,7 +1487,7 @@
                 },
                 {
                     "id": 30,
-                    "fiscalId": 64,
+                    "fiscalId": 18,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:07.239Z",
@@ -1482,7 +1495,7 @@
                 },
                 {
                     "id": 31,
-                    "fiscalId": 65,
+                    "fiscalId": 19,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:11.847Z",
@@ -1490,7 +1503,7 @@
                 },
                 {
                     "id": 32,
-                    "fiscalId": 66,
+                    "fiscalId": 20,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:15.547Z",
@@ -1498,7 +1511,7 @@
                 },
                 {
                     "id": 33,
-                    "fiscalId": 67,
+                    "fiscalId": 21,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:30.032Z",
@@ -1506,7 +1519,7 @@
                 },
                 {
                     "id": 34,
-                    "fiscalId": 68,
+                    "fiscalId": 22,
                     "colegioId": 2,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:21:36.851Z",
@@ -1514,7 +1527,7 @@
                 },
                 {
                     "id": 35,
-                    "fiscalId": 91,
+                    "fiscalId": 45,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:16.368Z",
@@ -1522,7 +1535,7 @@
                 },
                 {
                     "id": 36,
-                    "fiscalId": 92,
+                    "fiscalId": 46,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:21.566Z",
@@ -1530,7 +1543,7 @@
                 },
                 {
                     "id": 37,
-                    "fiscalId": 76,
+                    "fiscalId": 30,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:25.298Z",
@@ -1538,7 +1551,7 @@
                 },
                 {
                     "id": 38,
-                    "fiscalId": 77,
+                    "fiscalId": 31,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:28.739Z",
@@ -1546,7 +1559,7 @@
                 },
                 {
                     "id": 39,
-                    "fiscalId": 78,
+                    "fiscalId": 32,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:32.356Z",
@@ -1554,7 +1567,7 @@
                 },
                 {
                     "id": 40,
-                    "fiscalId": 79,
+                    "fiscalId": 33,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:36.299Z",
@@ -1562,7 +1575,7 @@
                 },
                 {
                     "id": 41,
-                    "fiscalId": 80,
+                    "fiscalId": 34,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:41.349Z",
@@ -1570,7 +1583,7 @@
                 },
                 {
                     "id": 42,
-                    "fiscalId": 81,
+                    "fiscalId": 35,
                     "colegioId": 3,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:22:45.297Z",
@@ -1578,7 +1591,7 @@
                 },
                 {
                     "id": 43,
-                    "fiscalId": 82,
+                    "fiscalId": 36,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:12.934Z",
@@ -1586,7 +1599,7 @@
                 },
                 {
                     "id": 44,
-                    "fiscalId": 83,
+                    "fiscalId": 37,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:16.539Z",
@@ -1594,7 +1607,7 @@
                 },
                 {
                     "id": 45,
-                    "fiscalId": 84,
+                    "fiscalId": 38,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:21.665Z",
@@ -1602,23 +1615,15 @@
                 },
                 {
                     "id": 46,
-                    "fiscalId": 85,
+                    "fiscalId": 39,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:25.709Z",
                     "updatedAt": "2025-10-18T06:23:25.709Z"
                 },
                 {
-                    "id": 47,
-                    "fiscalId": 86,
-                    "colegioId": 5,
-                    "enabled": true,
-                    "createdAt": "2025-10-18T06:23:30.821Z",
-                    "updatedAt": "2025-10-18T06:23:30.821Z"
-                },
-                {
                     "id": 48,
-                    "fiscalId": 87,
+                    "fiscalId": 41,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:34.621Z",
@@ -1626,7 +1631,7 @@
                 },
                 {
                     "id": 49,
-                    "fiscalId": 88,
+                    "fiscalId": 42,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:38.382Z",
@@ -1634,7 +1639,7 @@
                 },
                 {
                     "id": 50,
-                    "fiscalId": 89,
+                    "fiscalId": 43,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:43.185Z",
@@ -1642,16 +1647,455 @@
                 },
                 {
                     "id": 51,
-                    "fiscalId": 90,
+                    "fiscalId": 44,
                     "colegioId": 5,
                     "enabled": true,
                     "createdAt": "2025-10-18T06:23:46.855Z",
                     "updatedAt": "2025-10-18T06:23:46.855Z"
                 }
             ],
+            "hitos": [
+                {
+                    "id": 1,
+                    "nombre": "Capacitación",
+                    "descripcion": "Se capacitó el fiscal?",
+                    "fecha": "2025-10-21T03:17:39.854Z",
+                    "estadoDefault": "pendiente",
+                    "estado1Reconocimiento": "Pendiente",
+                    "estado1Color": "#DC2626",
+                    "estado2Reconocimiento": "En Progreso",
+                    "estado2Color": "#EAB308",
+                    "estado3Reconocimiento": "Completado",
+                    "estado3Color": "#16A34A",
+                    "estado4Reconocimiento": "Cancelado",
+                    "estado4Color": "#FFFFFF",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                }
+            ],
+            "hitoFiscales": [
+                {
+                    "id": 1,
+                    "hitoId": 1,
+                    "fiscalId": 46,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 2,
+                    "hitoId": 1,
+                    "fiscalId": 45,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 3,
+                    "hitoId": 1,
+                    "fiscalId": 44,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 4,
+                    "hitoId": 1,
+                    "fiscalId": 43,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 5,
+                    "hitoId": 1,
+                    "fiscalId": 42,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 6,
+                    "hitoId": 1,
+                    "fiscalId": 41,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 7,
+                    "hitoId": 1,
+                    "fiscalId": 40,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 8,
+                    "hitoId": 1,
+                    "fiscalId": 39,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 9,
+                    "hitoId": 1,
+                    "fiscalId": 38,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 10,
+                    "hitoId": 1,
+                    "fiscalId": 37,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 11,
+                    "hitoId": 1,
+                    "fiscalId": 36,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 12,
+                    "hitoId": 1,
+                    "fiscalId": 35,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 13,
+                    "hitoId": 1,
+                    "fiscalId": 34,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 14,
+                    "hitoId": 1,
+                    "fiscalId": 33,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 15,
+                    "hitoId": 1,
+                    "fiscalId": 32,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 16,
+                    "hitoId": 1,
+                    "fiscalId": 31,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 17,
+                    "hitoId": 1,
+                    "fiscalId": 30,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 18,
+                    "hitoId": 1,
+                    "fiscalId": 29,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 19,
+                    "hitoId": 1,
+                    "fiscalId": 28,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 20,
+                    "hitoId": 1,
+                    "fiscalId": 27,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 21,
+                    "hitoId": 1,
+                    "fiscalId": 26,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 22,
+                    "hitoId": 1,
+                    "fiscalId": 25,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 23,
+                    "hitoId": 1,
+                    "fiscalId": 24,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 24,
+                    "hitoId": 1,
+                    "fiscalId": 23,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 25,
+                    "hitoId": 1,
+                    "fiscalId": 22,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 26,
+                    "hitoId": 1,
+                    "fiscalId": 21,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 27,
+                    "hitoId": 1,
+                    "fiscalId": 20,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 28,
+                    "hitoId": 1,
+                    "fiscalId": 19,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 29,
+                    "hitoId": 1,
+                    "fiscalId": 18,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 30,
+                    "hitoId": 1,
+                    "fiscalId": 17,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 31,
+                    "hitoId": 1,
+                    "fiscalId": 16,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 32,
+                    "hitoId": 1,
+                    "fiscalId": 15,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 33,
+                    "hitoId": 1,
+                    "fiscalId": 14,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 34,
+                    "hitoId": 1,
+                    "fiscalId": 13,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 35,
+                    "hitoId": 1,
+                    "fiscalId": 12,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 36,
+                    "hitoId": 1,
+                    "fiscalId": 11,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 37,
+                    "hitoId": 1,
+                    "fiscalId": 10,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 38,
+                    "hitoId": 1,
+                    "fiscalId": 9,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 39,
+                    "hitoId": 1,
+                    "fiscalId": 8,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 40,
+                    "hitoId": 1,
+                    "fiscalId": 7,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 41,
+                    "hitoId": 1,
+                    "fiscalId": 6,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 42,
+                    "hitoId": 1,
+                    "fiscalId": 5,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 43,
+                    "hitoId": 1,
+                    "fiscalId": 4,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 44,
+                    "hitoId": 1,
+                    "fiscalId": 3,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 45,
+                    "hitoId": 1,
+                    "fiscalId": 2,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                },
+                {
+                    "id": 46,
+                    "hitoId": 1,
+                    "fiscalId": 1,
+                    "estado": "pendiente",
+                    "enabled": true,
+                    "createdAt": "2025-10-21T03:17:39.854Z",
+                    "updatedAt": "2025-10-21T03:17:39.854Z"
+                }
+            ],
+            "hitoMesas": [],
+            "hitoColegios": [],
+            "hitoZonas": [],
             "csvImports": []
         }
     },
     "message": "Datos exportados exitosamente",
-    "timestamp": "2025-10-18T17:15:56.435Z"
+    "timestamp": "2025-10-21T03:28:19.889Z"
 }
