@@ -1,0 +1,9 @@
+Ok, genera la solución apuntando a que existan los permisos siguientes
+
+ADMIN: con permiso de TODO
+COORDINADOR: Puede todos los datos de ZONAS, COLEGIOS, MESAS, FISCALES, CENTRO DE CONTROL, Monitor General, Hitos, Mapa de Colegios
+FISCAL_ZONA: Puede todos los datos de SU ZONAS (SOLO VISUALIZACION), COLEGIOS (SOLO VISUALIZACION), MESAS, FISCALES , CENTRO DE CONTROL (SOLO SU ZONA), Monitor General. SOLO VE ENTIDADES RELACIONADAS CON SU ZONA.
+FISCAL_GENERAL: Puede todos los datos de SU COLEGIOS (SOLO VISUALIZACION), MESAS, FISCALES , CENTRO DE CONTROL (SOLO SU COLEGIO), Monitor General. SOLO VE ENTIDADES RELACIONADAS CON SU COLEGIO.
+FISCAL_MESA: Puede todos los datos de SU COLEGIO (SOLO VISUALIZACION), MESAS  (SOLO VISUALIZACION), FISCALES  (SOLO VISUALIZACION) , CENTRO DE CONTROL (SOLO SU COLEGIO - VISUALIZACION), Monitor General. SOLO VE ENTIDADES RELACIONADAS CON SU COLEGIO.
+
+Finalmente escribí un documento explicando como quedó configurado para que el frontend lo pueda implementar
